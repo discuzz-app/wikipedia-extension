@@ -1,0 +1,22 @@
+{
+	"name": "DiscuzzCommentBox",
+	"author": "Martin Pham",
+	"url": "https://martinpham.com",
+	"description": "Adding Discuzz Comment Box to your Wiki",
+	"version": "0.1",
+	"license-name": "",
+	"type": "validextensionclass",
+	"manifest_version": 1,
+    "AutoloadClasses": {
+		"CommentBoxHooks": "includes/CommentBoxHooks.php"
+	},
+	"HookHandlers": {
+		"CommentBoxHooks": {
+			"class": "CommentBoxHooks"
+		}
+	},
+    "Hooks": {
+        "SkinAfterContent": "CommentBoxHooks::onSkinAfterContent",
+        "SkinAfterBottomScripts": "CommentBoxHooks::onSkinAfterBottomScripts"
+    }
+}
